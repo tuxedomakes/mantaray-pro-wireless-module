@@ -4,10 +4,8 @@ name: Mantaray_Pro_Wireless
 type: shield
 url: https://github.com/tuxedomakes/mantaray-pro-wireless-module/
 requires: [pro_micro]
-exposes: [i2c_oled]
 features:
   - keys
-  - display
 siblings:
   - mantaray_pro_wireless_left
   - mantaray_pro_wireless_right
