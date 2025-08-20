@@ -1,0 +1,8 @@
+# Copyright (c) 2025 Colton Hawkins
+# SPDX-License-Identifier: MIT
+
+config SHIELD_MANTARAY_PRO_WIRELESS_LEFT
+    def_bool $(shields_list_contains,mantaray_pro_wireless_left)
+
+config SHIELD_MANTARAY_PRO_WIRELESS_RIGHT
+    def_bool $(shields_list_contains,mantaray_pro_wireless_right)
