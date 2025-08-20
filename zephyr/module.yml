@@ -1,4 +1,4 @@
+name: zmk-keyboard-mantaray_pro_wireless
 build:
   settings:
     board_root: .
-    name: zmk-keyboard-mantaray_pro_wireless
