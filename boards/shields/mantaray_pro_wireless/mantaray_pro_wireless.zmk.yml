@@ -6,6 +6,8 @@ url: https://github.com/tuxedomakes/mantaray-pro-wireless-module/
 requires: [pro_micro]
 features:
   - keys
+  - underglow
+  - studio
 siblings:
   - mantaray_pro_wireless_left
   - mantaray_pro_wireless_right
