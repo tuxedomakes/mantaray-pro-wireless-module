@@ -20,6 +20,6 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: mantaray_pro_wireless_left nice_view
+    shield: mantaray_pro_wireless_left nice_view_adapter nice_view
   - board: nice_nano_v2
-    shield: mantaray_pro_wireless_right nice_view
+    shield: mantaray_pro_wireless_right nice_view_adapter nice_view
