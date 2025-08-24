@@ -5,45 +5,13 @@
  */
 
 / {
+    // FIX: Merged all root-level nodes into a single / { ... }; block for clarity.
     sensors {
         compatible = "zmk,keymap-sensors";
         sensors = <&left_encoder &right_encoder>;
-        triggers-per-rotation = 20; // Adjust as needed, 20 or 24 is common
-    };
-};
-
-&pinctrl {
-    encoder_left_a_pin: encoder_left_a_pin {
-        gpios = <&pro_micro 6 GPIO_ACTIVE_HIGH | GPIO_PULL_UP>;
-    };
-    encoder_left_b_pin: encoder_left_b_pin {
-        gpios = <&pro_micro 7 GPIO_ACTIVE_HIGH | GPIO_PULL_UP>;
-    };
-    encoder_right_a_pin: encoder_right_a_pin {
-        gpios = <&pro_micro 6 GPIO_ACTIVE_HIGH | GPIO_PULL_UP>;
-    };
-    encoder_right_b_pin: encoder_right_b_pin {
-        gpios = <&pro_micro 7 GPIO_ACTIVE_HIGH | GPIO_PULL_UP>;
-    };
-};
-
-&sensor {
-    left_encoder: encoder_left {
-        compatible = "alps,ec11";
-        a-gpios = <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>; // Match your pin definition
-        b-gpios = <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;  // Match your pin definition
-        status = "disabled";
+        triggers-per-rotation = <20>; // <-- FIX: Numeric values should be in angle brackets.
     };
 
-    right_encoder: encoder_right {
-        compatible = "alps,ec11";
-        a-gpios = <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>; // Match your pin definition
-        b-gpios = <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;  // Match your pin definition
-        status = "disabled";
-    };
-};
-
-/ {
     chosen {
         // Define the kscan driver for ZMK
         zmk,kscan = &kscan0;
@@ -70,5 +38,36 @@
             , <&pro_micro 14 GPIO_ACTIVE_HIGH>
             , <&pro_micro 15 GPIO_ACTIVE_HIGH>
             ;
+    };
+};
+
+&pinctrl {
+    encoder_left_a_pin: encoder_left_a_pin {
+        gpios = <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>; // <-- FIX: Added parentheses. This was the build error.
+    };
+    encoder_left_b_pin: encoder_left_b_pin {
+        gpios = <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>; // <-- FIX: Added parentheses.
+    };
+    encoder_right_a_pin: encoder_right_a_pin {
+        gpios = <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>; // <-- FIX: Added parentheses.
+    };
+    encoder_right_b_pin: encoder_right_b_pin {
+        gpios = <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>; // <-- FIX: Added parentheses.
+    };
+};
+
+&sensor {
+    left_encoder: encoder_left {
+        compatible = "alps,ec11";
+        a-gpios = <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>; // <-- FIX: Matched pin number (6) from pinctrl.
+        b-gpios = <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>; // <-- FIX: Matched pin number (7) from pinctrl.
+        status = "disabled";
+    };
+
+    right_encoder: encoder_right {
+        compatible = "alps,ec11";
+        a-gpios = <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>; // <-- FIX: Matched pin number (6) from pinctrl.
+        b-gpios = <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>; // <-- FIX: Matched pin number (7) from pinctrl.
+        status = "disabled";
     };
 };
