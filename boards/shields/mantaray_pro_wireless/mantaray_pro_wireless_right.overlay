@@ -22,6 +22,10 @@
     };
 };
 
+&right_encoder {
+    status = "okay";
+};
+
 &spi3 {
     compatible = "nordic,nrf-spim";
     status = "okay";
