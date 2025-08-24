@@ -5,12 +5,6 @@
  */
 
 / {
-    sensors {
-        compatible = "zmk,keymap-sensors";
-        sensors = <&left_encoder &right_encoder>;
-        triggers-per-rotation = <20>;
-    };
-
     chosen {
         zmk,kscan = &kscan0;
     };
@@ -36,35 +30,4 @@
             ;
     };
 
-    // The encoder definitions are now here, at the root level,
-    // instead of inside an '&sensor' block that doesn't exist.
-
-    left_encoder: encoder_left {
-        compatible = "alps,ec11";
-        a-gpios = <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        b-gpios = <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        status = "disabled";
-    };
-
-    right_encoder: encoder_right {
-        compatible = "alps,ec11";
-        a-gpios = <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        b-gpios = <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        status = "disabled";
-    };
-};
-
-&pinctrl {
-    encoder_left_a_pin: encoder_left_a_pin {
-        gpios = <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-    };
-    encoder_left_b_pin: encoder_left_b_pin {
-        gpios = <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-    };
-    encoder_right_a_pin: encoder_right_a_pin {
-        gpios = <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-    };
-    encoder_right_b_pin: encoder_right_b_pin {
-        gpios = <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-    };
 };
