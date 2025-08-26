@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2024 The ZMK Contributors
+ * Copyright (c) 2025 Colton Hawkins
  *
  * SPDX-License-Identifier: MIT
  */
@@ -39,6 +39,10 @@
         spi-zero-frame = <0x40>;
         color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
     };
+};
+
+&default_transform { // Offset of 3 because the left side has 3 columns
+    col-offset = <6>;
 };
 
 / {
