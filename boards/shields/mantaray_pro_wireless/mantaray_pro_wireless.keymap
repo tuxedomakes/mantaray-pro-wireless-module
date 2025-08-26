@@ -2,10 +2,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-&led_strip {
-    chain-length = <1>;
-};
-
 / {
 
     keymap {
@@ -28,7 +24,7 @@
 
         };
 
-        symbols_layer { // Layer 0
+        symbols_layer { // Layer 1
             display-name = "Symbols";
             // -------------------------------------
             // |     Z     |     M     |     K     |
