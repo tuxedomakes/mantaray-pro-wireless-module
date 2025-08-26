@@ -18,17 +18,12 @@
             // |     A     |     B     |     C     |
             // |     D     |     E     |     F     |
             bindings = <
-                &mt KP_EQUAL ESC  &kp N1 &kp N2 &kp N3 &kp N4 &kp N5
-                &kp CAPS &kp Q &kp W &kp E &kp R &kp T              
-                &mt LSHIFT BACKSPACE &kp A &kp S &kp D &kp F &kp G  
-                &kp LWIN &mt LALT Z  &kp X &kp C &kp V &kp B        
-                &lt 1 ENTER &mt LCTRL TAB                           
+                &mt KP_EQUAL ESC  &kp N1 &kp N2 &kp N3 &kp N4 &kp N5   &kp N6 &kp N7  &kp N8     &kp N9   &kp N0    &kp MINUS
+                &kp CAPS &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P &kp BACKSLASH
+                &mt LSHIFT BACKSPACE &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K &kp L &kp SEMICOLON &mt RSHFT SINGLE_QUOTE
+                &kp LWIN &mt LALT Z  &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &mt RALT FSLH &kp RCTRL
+                &lt 1 ENTER &mt LCTRL TAB &mt LSHIFT BACKSPACE &mt ENTER SPACE
                 
-                &kp N6 &kp N7  &kp N8     &kp N9   &kp N0    &kp MINUS
-                &kp Y &kp U  &kp I     &kp O   &kp P &kp BACKSLASH
-                &kp H &kp J  &kp K &kp L &kp SEMICOLON &mt RSHFT SINGLE_QUOTE
-                &kp N &kp M  &kp COMMA &kp DOT &mt RALT FSLH &kp RCTRL
-                &mt LSHIFT BACKSPACE &mt ENTER SPACE
             >;
 
         };
@@ -40,17 +35,11 @@
             // |     A     |     B     |     C     |
             // |     D     |     E     |     F     |
             bindings = <
-                &kp ESC  &kp F1 &kp F2 &kp F3 &kp F4 &kp F5                          
-                &kp GRAVE &kp EXCLAMATION &kp AT_SIGN &kp HASH &kp DOLLAR &kp PERCENT
-                &none &kp CARET &kp AMPS &kp ASTRK &kp LPAR &kp RPAR                 
-                &none &none  &kp LBKT &kp RBKT &kp LBRC &kp RBRC                     
-                &none &none   
-
-                &kp F6 &kp F7  &kp F8     &kp F9   &kp F10    &kp F11
-                &kp KP_N7 &kp KP_N8  &kp KP_N9     &kp KP_MINUS   &kp KP_DIVIDE &kp F12
-                &kp KP_N4 &kp KP_N5  &kp KP_N6 &kp PLUS &kp KP_MULTIPLY &kp BSPC
-                &kp KP_N1 &kp KP_N2  &kp KP_N3 &kp DOT &kp EQUAL &kp ENTER
-                &none &kp KP_N0                                                       
+                &kp ESC  &kp F1 &kp F2 &kp F3 &kp F4 &kp F5   &kp F6 &kp F7  &kp F8     &kp F9   &kp F10    &kp F11
+                &kp GRAVE &kp EXCLAMATION &kp AT_SIGN &kp HASH &kp DOLLAR &kp PERCENT   &kp KP_N7 &kp KP_N8  &kp KP_N9     &kp KP_MINUS   &kp KP_DIVIDE &kp F12
+                &none &kp CARET &kp AMPS &kp ASTRK &kp LPAR &kp RPAR   &kp KP_N4 &kp KP_N5  &kp KP_N6 &kp PLUS &kp KP_MULTIPLY &kp BSPC
+                &none &none  &kp LBKT &kp RBKT &kp LBRC &kp RBRC   &kp KP_N1 &kp KP_N2  &kp KP_N3 &kp DOT &kp EQUAL &kp ENTER
+                &none &none &none &kp KP_N0
                 
             >;
 
