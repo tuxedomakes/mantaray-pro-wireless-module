@@ -25,6 +25,4 @@
             >;
         };
     };
-    sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN   // Left encoder: Volume Up/Down
-                       &inc_dec_kp PG_UP PG_DN>;     // Right encoder: Page Up/Page Down
  };
