@@ -7,11 +7,12 @@
 };
 
 / {
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer { // Layer 0
-            display_name = "Base";
+            display-name = "Base";
             // -------------------------------------
             // |     Z     |     M     |     K     |
             // |     A     |     B     |     C     |
@@ -24,10 +25,11 @@
                 &lt 1 ENTER &mt LCTRL TAB &mt LSHIFT BACKSPACE &mt ENTER SPACE
                 
             >;
+
         };
 
         symbols_layer { // Layer 0
-            display_name = "Symbols";
+            display-name = "Symbols";
             // -------------------------------------
             // |     Z     |     M     |     K     |
             // |     A     |     B     |     C     |
@@ -40,6 +42,7 @@
                 &none &none &none &kp KP_N0
                 
             >;
+
         };
     };
 
