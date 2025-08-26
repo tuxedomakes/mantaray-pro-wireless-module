@@ -16,10 +16,11 @@
             // |     A     |     B     |     C     |
             // |     D     |     E     |     F     |
             bindings = <
-                &studio_unlock   &bt BT_CLR_ALL &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-                &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-                &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
+                &mt KP_EQUAL ESC  &kp N1 &kp N2 &kp N3 &kp N4 &kp N5   &kp N6 &kp N7  &kp N8     &kp N9   &kp N0    &kp MINUS
+                &kp CAPS &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P &kp BACKSLASH
+                &mt LSHIFT BACKSPACE &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K &kp L &kp SEMICOLON &mt RSHFT SINGLE_QUOTE
+                &kp LWIN &mt LALT Z  &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &mt RALT FSLH &kp RCTRL
+                &mt ENTER &mo 1
                 
             >;
         };
