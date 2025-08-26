@@ -35,7 +35,7 @@
                 &kp GRAVE &kp EXCLAMATION &kp AT_SIGN &kp HASH &kp DOLLAR &kp PERCENT   &kp KP_N7 &kp KP_N8  &kp KP_N9     &kp KP_MINUS   &kp KP_DIVIDE &kp F12
                 &none &kp CARET &kp AMPS &kp ASTRK &kp LPAR &kp RPAR   &kp KP_N4 &kp KP_N5  &kp KP_N6 &kp PLUS &kp KP_MULTIPLY &kp BSPC
                 &none &none  &kp LBKT &kp RBKT &kp LBRC &kp RBRC   &kp KP_N1 &kp KP_N2  &kp KP_N3 &kp DOT &kp EQUAL &kp ENTER
-                &none &none &none &KP KP_N0
+                &none &none &none &kp KP_N0
                 
             >;
         };
