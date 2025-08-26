@@ -1,16 +1,19 @@
+/*
+ * Copyright (c) 2025 Colton Hawkins
+ *
+ * SPDX-License-Identifier: MIT
+ */
+ 
 #include "mantaray_pro_wireless.dtsi"
 #include <dt-bindings/led/led.h>
 
 &pinctrl {
-    // This defines the pin state for the SPI MOSI (data) line.
-    // We are using pin P0.08 as specified.
     spi3_default: spi3_default {
         group1 {
             psels = <NRF_PSEL(SPIM_MOSI, 0, 8)>;
         };
     };
 
-    // Defines the pin state for when the SPI bus is idle/sleeping.
     spi3_sleep: spi3_sleep {
         group1 {
             psels = <NRF_PSEL(SPIM_MOSI, 0, 8)>;
@@ -19,40 +22,25 @@
     };
 };
 
-&left_encoder {
-    status = "okay";
-};
-
-// Enable the SPI3 peripheral on the nice!nano
 &spi3 {
     compatible = "nordic,nrf-spim";
     status = "okay";
 
-    // Link our pin control configurations to the SPI peripheral.
     pinctrl-0 = <&spi3_default>;
     pinctrl-1 = <&spi3_sleep>;
     pinctrl-names = "default", "sleep";
 
-    // Define the WS2812 LED strip as a device on the SPI bus.
     led_strip: ws2812@0 {
         compatible = "worldsemi,ws2812-spi";
-
-        /* SPI */
-        reg = <0>; // This is required but ignored for WS2812.
+        reg = <0>;
         spi-max-frequency = <4000000>;
-
-        /* WS2812 */
-        // The number of LEDs in your strip.
         chain-length = <1>;
         spi-one-frame = <0x70>;
         spi-zero-frame = <0x40>;
-        
-        // Defines the color order for your specific LED strip (e.g., GRB, RGB).
         color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
     };
 };
 
-// Tell ZMK to use our 'led_strip' device for underglow.
 / {
     chosen {
         zmk,underglow = &led_strip;
