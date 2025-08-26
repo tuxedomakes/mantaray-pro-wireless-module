@@ -11,6 +11,7 @@
         compatible = "zmk,keymap";
 
         default_layer { // Layer 0
+            display_name = "Base";
             // -------------------------------------
             // |     Z     |     M     |     K     |
             // |     A     |     B     |     C     |
@@ -26,6 +27,7 @@
         };
 
         symbols_layer { // Layer 0
+            display_name = "Symbols";
             // -------------------------------------
             // |     Z     |     M     |     K     |
             // |     A     |     B     |     C     |
