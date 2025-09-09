@@ -75,11 +75,11 @@ nice_view_spi: &spi1 {
             , <&xiao_d 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
         col-gpios
-            = <&xiao_d 11 GPIO_ACTIVE_HIGH>
-            , <&xiao_d 12 GPIO_ACTIVE_HIGH>
-            , <&xiao_d 13 GPIO_ACTIVE_HIGH>
-            , <&xiao_d 14 GPIO_ACTIVE_HIGH>
-            , <&xiao_d 15 GPIO_ACTIVE_HIGH>
+            = <&gpio0 15 GPIO_ACTIVE_HIGH> // D11
+            , <&gpio0 19 GPIO_ACTIVE_HIGH> // D12
+            , <&gpio1 1 GPIO_ACTIVE_HIGH> //D13
+            , <&gpio0 9 GPIO_ACTIVE_HIGH> // D14
+            , <&gpio0 10 GPIO_ACTIVE_HIGH> // D15
             , <&xiao_d 7 GPIO_ACTIVE_HIGH>
             ;
     };
