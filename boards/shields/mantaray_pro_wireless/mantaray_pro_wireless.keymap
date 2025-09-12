@@ -14,7 +14,7 @@
                 &kp CAPS &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P &kp BACKSLASH
                 &mt LSHIFT BACKSPACE &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K &kp L &kp SEMICOLON &mt RSHFT SINGLE_QUOTE
                 &kp LWIN &mt LALT Z  &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &mt RALT FSLH &kp RCTRL
-                &lt 1 ENTER &mt LCTRL TAB &mt LSHIFT BACKSPACE &mt ENTER SPACE
+                &lt 1 ENTER &mt LCTRL TAB &mt LSHIFT BACKSPACE &mt 2 SPACE
                 
             >;
 
@@ -31,6 +31,27 @@
                 
             >;
 
+        };
+
+        media_layer { // Layer 2
+            display-name = "Media";
+            bindings = <
+                &none  &none &none &none &none &none   &none &none  &none     &none   &none    &none
+                &none &none &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE &none   &kp PG_UP &kp HOME  &kp UP     &kp END   &none &none
+                &none &kp C_PREV &kp C_NEXT &kp C_PP &kp C_PLAY &none &kp PG_DN   &kp LEFT &kp DOWN  &kp RIGHT &none &none
+                &none &none  &none &none &none &none   &none &none  &none &none &none &none
+                &none &none &none &none
+                
+            >;
+
+        };
+
+        extra1 {
+            status = "reserved";
+        };
+
+        extra2 {
+            status = "reserved";
         };
     };
 
