@@ -13,4 +13,7 @@ if SHIELD_MANTARAY_PRO_WIRELESS_LEFT || SHIELD_MANTARAY_PRO_WIRELESS_RIGHT
 config ZMK_SPLIT
     default y
 
+config NFCT_PINS_AS_GPIOS
+    default y
+
 endif
