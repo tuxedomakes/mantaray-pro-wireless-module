@@ -55,7 +55,7 @@
 
         combo_clear_bt {
             timeout-ms = <50>; // The keys must be pressed within 50ms of each other
-            key-positions = <13 22>; // Use key positions 0 (Q) and 9 (P)
+            key-positions = <13 22>; // Use key positions 13 (Q) and 22 (P)
             bindings = <&bt BT_CLR>;
             // To make the combo trigger only on hold, uncomment the line below
             require-prior-idle-ms = <200>;
